@@ -18,9 +18,6 @@ public class StorageService {
     @Autowired
     private StorageDAO storageDAO;
 
-    @Autowired
-    private YswService yswService;
-
     @Transactional
     public void deduct(String commodityCode, int count){
         Storage storage = storageDAO.findByCommodityCode(commodityCode);
